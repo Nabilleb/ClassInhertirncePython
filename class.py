@@ -28,3 +28,7 @@ class Instructor(User):
     def __init__(self, name, email):
         super().__init__(name, email)
         self.__teaching_courses = []
+    
+    def add_course(self, course_name):
+        self.__teaching_courses.append(course_name)
+

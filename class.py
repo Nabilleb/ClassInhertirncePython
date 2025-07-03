@@ -18,3 +18,6 @@ class Student(User):
 
     def enroll(self, course_name):
         self.__enrolled_courses.append(course_name)
+
+    def get_enrolled_courses(self):
+        return self.__enrolled_courses

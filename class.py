@@ -14,4 +14,7 @@ class User:
 class Student(User):
     def __init__(self, name, email, enrolled_courses):
         super().__init__(name, email)
-        self.__enrolled_courses = enrolled_courses
+        self.__enrolled_courses = []
+
+    def enroll(self, course_name):
+        self.__enrolled_courses.append(course_name)

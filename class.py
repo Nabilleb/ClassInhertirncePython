@@ -12,7 +12,7 @@ class User:
 
 
 class Student(User):
-    def __init__(self, name, email, enrolled_courses):
+    def __init__(self, name, email):
         super().__init__(name, email)
         self.__enrolled_courses = []
 
@@ -21,3 +21,10 @@ class Student(User):
 
     def get_enrolled_courses(self):
         return self.__enrolled_courses
+    
+
+
+class Instructor(User):
+    def __init__(self, name, email):
+        super().__init__(name, email)
+        self.__teaching_courses = []

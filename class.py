@@ -32,3 +32,5 @@ class Instructor(User):
     def add_course(self, course_name):
         self.__teaching_courses.append(course_name)
 
+    def get_teaching_courses(self):
+        return self.__teaching_courses

@@ -34,3 +34,17 @@ class Instructor(User):
 
     def get_teaching_courses(self):
         return self.__teaching_courses
+    
+
+if __name__ == "__main__":
+    student = Student("Alice", "alice@example.com")
+    student.enroll("Math")
+    student.enroll("Science")
+    print(student.get_info())
+    print("Enrolled Courses:", student.get_enrolled_courses())
+
+    instructor = Instructor("Bob", "bob@example.com")
+    instructor.add_course("History")
+    instructor.add_course("Literature")
+    print(instructor.get_info())
+    print("Teaching Courses:", instructor.get_teaching_courses())
